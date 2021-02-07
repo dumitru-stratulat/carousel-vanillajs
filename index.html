@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/popup.css">
+    <link rel="stylesheet" href="./styles/dropdown.css">
+    <link rel="stylesheet" href="./styles/carousel.css">
+    <title>Shop</title>
+</head>
+
+<body>
+    <header>
+        <h1>Chosen for you</h1>
+        <h3>We think you will love this</h3>
+    </header>
+    <section class="filtersContainer">
+        Price:
+        <input 
+            id="minPrice" 
+            placeholder="min"
+            type="text"
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+        <input 
+            id="maxPrice" 
+            placeholder="max"
+            type="text"
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+        <button id="searchPriceButton">Sort</button>
+        <div id="searchWrapper">
+            <input 
+                type="text" 
+                name="searchBar" 
+                id="searchBar" 
+                placeholder="search for a product" 
+            />
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Womens</button>
+            <div class="dropdown-content">
+                <a href="#" onclick="filterByCategory('')">Womens</a>
+                <a href="#" onclick="filterByCategory('jacket')">Jacket</a>
+                <a href="#" onclick="filterByCategory('leggings')">Leggings</a>
+                <a href="#" onclick="filterByCategory('jeggings')">Jeggings</a>
+            </div>
+        </div>
+    </section>
+    <section class="carouselContainer">
+        <div class="carousel">
+            <div class="carouselBox">
+
+            </div>
+            <a class="leftArrow" onclick="sliderScrollLeft()">
+                &#8826
+            </a>
+             <a class="rightArrow" onclick="sliderScrollRight()">
+                &#8827
+            </a>
+        </div>
+    </section>
+    <div class="popup">
+        <div class="overlay">
+
+        </div>
+        <div class="content">
+            <div class="close-btn" onclick="togglePopup()">&times;</div>
+            <img src="#" alt="Image of product" class="popupImage" />
+            <a class="popupProductDescription">
+            </a>
+            <h2 class="popupProductPrice"></h2>
+        </div>
+    </div>
+    <script src="./js/popup.js"></script>
+    <script src="./api/products.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/carousel.js"></script>
+    <script src="./js/filters.js"></script>
+</body>
+
+</html>

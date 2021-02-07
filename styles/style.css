@@ -1,0 +1,65 @@
+header{
+    text-align: center;
+}
+#minPrice, #maxPrice{
+    width: 50px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.04);
+    font-size: 14px;
+    padding: 2px;
+    outline: none;
+    text-align: center;
+}
+#searchBar{
+    width: 30vw;
+    height: 30px;
+    border: 1px solid rgba(0,0,0,0.04);
+    border-radius: 20px;
+    background-color: rgba(0,0,0,0.05);
+    font-size: 14px;
+    padding: 5px;
+    letter-spacing: 0.3px;
+    outline:none;
+}
+#searchPriceButton{
+    border: 1px solid rgba(0,0,0,0.4);
+    padding: 5px;
+    border-radius: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+}
+#searchPriceButton:hover{
+    background-color: rgba(0,0,0,0.05);
+}
+.filtersContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.filtersContainer * {
+    margin: 5px;
+}
+.productDescription{
+    margin: 0px; 
+    margin-left: 10px;
+    font-size: 14px;
+    white-space: normal;
+    height: 40px;;
+    cursor: pointer;
+}
+.cardWrap{
+    width: 200px;
+    margin: 0px;
+}
+@media screen and (max-width: 576px) {
+    #searchBar{
+        width: 50vw;
+    }
+    .filtersContainer{
+        display: block;
+        text-align: center;
+    }
+}
