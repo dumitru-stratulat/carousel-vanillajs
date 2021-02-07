@@ -34,10 +34,10 @@ searchBar.addEventListener('keyup', (e) => {
 
 });
 
-const displayProducts = (characters) => {
+const displayProducts = (products) => {
     try {
         carousel.innerHTML = '';
-        characters
+        products
             .map((product,index) => {
                 const div = document.createElement("div");
                 const img = document.createElement("img");
