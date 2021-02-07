@@ -35,9 +35,9 @@ const filterByCategory = (category) =>{
     try {
         const productsFilteredByPrice =  filterByPrice(productDataWomens,maxPrice);
         const productsFilteredByKeyWords = filterByKeyWord(productsFilteredByPrice,searchString)
-        const filteredByCategory = filterByKeyWord(productsFilteredByKeyWords,category)
+        const productsFilteredByCategory = filterByKeyWord(productsFilteredByKeyWords,category)
 
-        displayProducts(filteredByCategory);
+        displayProducts(productsFilteredByCategory);
     } catch (error) {
         console.error("Error")
     }
